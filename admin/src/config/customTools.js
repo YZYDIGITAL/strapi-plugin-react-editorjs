@@ -14,6 +14,11 @@ import CheckList from '@editorjs/checklist'
 import Delimiter from '@editorjs/delimiter'
 import InlineCode from '@editorjs/inline-code'
 
+import Strikethrough from '@sotaproject/strikethrough';
+import AnyButton from 'editorjs-button';
+import ToggleBlock from 'editorjs-toggle-block';
+ 
+
 const customTools = {
   embed: Embed,
   table: {
@@ -65,6 +70,20 @@ const customTools = {
   },
   delimiter: Delimiter,
   inlineCode: InlineCode,
+  strikethrough: Strikethrough,
+  AnyButton: {
+    class: AnyButton,
+    inlineToolbar: false,
+    config:{
+      css:{
+        "btnColor": "Button--outlined",
+      }
+    }
+  },
+  toggle: {
+    class: ToggleBlock,
+    inlineToolbar: true,
+  },
 }
 
 export default customTools
